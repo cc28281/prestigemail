@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PrestigeMail Agency | Email Marketing that Converts</title>
+    <!-- Google Fonts for clean typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">PrestigeMail</div>
+        <!-- Checkbox hack for responsive menu -->
+        <input type="checkbox" id="menu-toggle" aria-label="Toggle menu" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#case-studies">Case Studies</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>
+          Transform Your Email Outreach with
+          <span>PrestigeMail</span>
+        </h1>
+        <p>
+          Email marketing strategies that convert leads into loyal customers.
+        </p>
+        <a href="#contact" class="btn-primary">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services" class="services section">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service-items">
+          <div class="service-item">
+            <i class="fa-solid fa-envelope-open-text"></i>
+            <h3>Cold Outreach Campaigns</h3>
+            <p>
+              Targeted cold email campaigns designed to spark conversations and
+              generate high‑quality leads.
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fa-solid fa-pen-nib"></i>
+            <h3>Email Copywriting</h3>
+            <p>
+              Persuasive copywriting that speaks to your audience and drives
+              action.
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fa-solid fa-robot"></i>
+            <h3>Automated Email Sequences</h3>
+            <p>
+              Automated workflows that nurture prospects and convert them into
+              customers.
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fa-solid fa-users"></i>
+            <h3>List Building &amp; Segmentation</h3>
+            <p>
+              Grow your subscriber list and segment your audience for
+              personalized messaging.
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Analytics &amp; Optimization</h3>
+            <p>
+              Data‑driven insights and continuous optimization to maximize your
+              return on investment.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case studies section -->
+    <section id="case-studies" class="case-studies section">
+      <div class="container">
+        <h2>Case Studies</h2>
+        <div class="case-items">
+          <div class="case-item">
+            <h3>+40% Open Rate</h3>
+            <p>
+              For a SaaS client, our cold outreach strategy boosted email open
+              rates by over 40%.
+            </p>
+          </div>
+          <div class="case-item">
+            <h3>3× Lead Conversions</h3>
+            <p>
+              We tripled lead conversions for an e‑commerce brand through
+              effective segmentation and copy.
+            </p>
+          </div>
+          <div class="case-item">
+            <h3>+250% List Growth</h3>
+            <p>
+              Our list building tactics grew a client’s email list by more than
+              250% in six months.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section id="about" class="about section">
+      <div class="container about-container">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            PrestigeMail Agency is an email marketing agency dedicated to
+            helping businesses thrive through strategic email campaigns. With
+            expertise in cold outreach, copywriting, automation and analytics,
+            we turn prospects into customers and customers into advocates. Our
+            team brings decades of combined marketing experience, staying on
+            the cutting edge of digital communications to deliver measurable
+            results for our clients.
+          </p>
+        </div>
+        <div class="about-graphic">
+          <!-- Using the circle-nodes icon to represent collaboration and
+               interconnected teamwork within the agency -->
+          <i class="fa-solid fa-circle-nodes fa-4x"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i> contact@prestigemail.com</p>
+            <p><i class="fa-solid fa-phone"></i> +1 (123) 456‑7890</p>
+            <p><i class="fa-solid fa-location-dot"></i> 123 Marketing Street,
+              Kaunas, Lithuania</p>
+          </div>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mexample"
+            method="POST"
+          >
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="_replyto" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 PrestigeMail Agency. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

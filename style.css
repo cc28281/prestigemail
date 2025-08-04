@@ -1,0 +1,365 @@
+/*
+ * PrestigeMail Agency Website Styles
+ *
+ * This stylesheet defines a modern, responsive design for a
+ * professional email‑marketing agency. The colours, typography and
+ * layout reflect the themes of digital communication and clarity,
+ * inspired by the key elements successful marketing agency websites
+ * share【684386212928311†L160-L220】. Feel free to customise the
+ * variables at the top of this file to tweak the colour palette or
+ * spacing across the entire site.
+ */
+
+/* CSS custom properties make it easy to adjust colours and sizes */
+:root {
+  --primary-color: #2fc4f0;      /* bright blue for calls to action */
+  --secondary-color: #7b4ede;    /* purple accent colour */
+  --dark-color: #020c2c;         /* deep navy for backgrounds */
+  --light-bg: #f7f9fc;           /* very light grey for cards */
+  --text-color: #1a1a1a;         /* primary text colour */
+  --max-width: 1200px;
+}
+
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  background: #fff;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(2, 12, 44, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: #fff;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: colour 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* Hamburger menu (hidden on desktop) */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background: url('images/hero-bg.png') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding-top: 60px; /* account for fixed nav */
+}
+
+/* Overlay to darken background and improve contrast */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 12, 44, 0.6);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  colour: var(--secondary-color);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--primary-color);
+  colour: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--secondary-color);
+}
+
+/* Section styling */
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Services */
+.services .service-items {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.service-item {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item i {
+  font-size: 2rem;
+  colour: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+  colour: #555;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Case studies */
+.case-studies .case-items {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.case-item {
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.case-item h3 {
+  font-size: 1.5rem;
+  colour: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.case-item p {
+  colour: #555;
+  font-size: 0.95rem;
+}
+
+/* About section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-text {
+  flex: 1 1 350px;
+}
+
+.about-text p {
+  colour: #555;
+  font-size: 1rem;
+}
+
+.about-graphic {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-graphic i {
+  font-size: 6rem;
+  colour: var(--primary-color);
+}
+
+/* Contact section */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  font-size: 1rem;
+  colour: #555;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 0.5rem;
+  colour: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+  background: var(--light-bg);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  background: var(--primary-color);
+  colour: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background: var(--dark-color);
+  colour: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Show hamburger icon */
+  .hamburger {
+    display: flex;
+  }
+  /* Hide navigation links by default */
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: -200px;
+    width: 200px;
+    height: calc(100vh - 60px);
+    background: #020c2c;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: right 0.3s ease;
+  }
+  /* Slide menu when toggle is checked */
+  #menu-toggle:checked ~ .nav-links {
+    right: 0;
+  }
+}
